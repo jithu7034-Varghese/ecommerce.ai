@@ -1,0 +1,39 @@
+import type { Metadata } from 'next';
+import '@/styles/globals.css';
+import { StoreProvider } from '@/context/StoreContext';
+import { BagDrawer } from '@/components/storefront/BagDrawer';
+import { AIAssistantModal } from '@/components/storefront/AIAssistantModal';
+
+export const metadata: Metadata = {
+  title: 'Berachtech E-Commerce AI OS — Human-Centred Fashion & Retail Platform',
+  description: 'Intuitive AI-powered luxury fashion shopping and ergonomic merchant operations suite.',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
+        <StoreProvider>
+          {children}
+          <BagDrawer />
+          <AIAssistantModal />
+        </StoreProvider>
+      </body>
+    </html>
+  );
+}

@@ -1,0 +1,96 @@
+:root {
+  /* Customer Storefront Palette */
+  --store-bg: #FAFAF8;
+  --store-surface: #FFFFFF;
+  --store-surface-elevated: #F4F4F0;
+  --store-border: #E8E8E3;
+  --store-border-focus: #18181B;
+
+  --store-text-primary: #18181B;
+  --store-text-secondary: #52525B;
+  --store-text-muted: #71717A;
+
+  --store-accent-primary: #7C3AED;
+  --store-accent-hover: #6D28D9;
+  --store-accent-subtle: #F5F3FF;
+  --store-accent-border: #DDD6FE;
+
+  /* Merchant Dark-Purple Ergonomic Palette */
+  --merchant-sidebar-bg: #160B22;
+  --merchant-sidebar-border: #231238;
+  --merchant-sidebar-hover: #26143D;
+  --merchant-sidebar-active-bg: #7C3AED;
+  --merchant-sidebar-active-text: #FFFFFF;
+  --merchant-sidebar-text: #D6D0E0;
+  --merchant-sidebar-muted: #8E82A1;
+
+  --merchant-workspace-bg: #F8FAFC;
+  --merchant-card-bg: #FFFFFF;
+  --merchant-card-border: #E2E8F0;
+  --merchant-card-border-hover: #CBD5E1;
+  --merchant-card-shadow: 0 4px 20px -2px rgba(22, 11, 34, 0.05);
+
+  /* Status Tokens */
+  --status-success-bg: #ECFDF5;
+  --status-success-border: #A7F3D0;
+  --status-success-text: #065F46;
+
+  --status-warning-bg: #FFFBEB;
+  --status-warning-border: #FDE68A;
+  --status-warning-text: #92400E;
+
+  --status-danger-bg: #FEF2F2;
+  --status-danger-border: #FECACA;
+  --status-danger-text: #991B1B;
+
+  --status-info-bg: #EFF6FF;
+  --status-info-border: #BFDBFE;
+  --status-info-text: #1E40AF;
+
+  /* Typography Scale */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Playfair Display', -apple-system, sans-serif;
+
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+
+  /* Spacing Grid (4px base) */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+
+  /* Touch Target Minimum (WCAG 2.5.8 & 2.5.5) */
+  --touch-target-min: 44px;
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-modal: 0 25px 50px -12px rgba(22, 11, 34, 0.25);
+
+  /* Accessible Focus Indicator (WCAG 2.4.11) */
+  --focus-ring-color: #7C3AED;
+  --focus-ring-offset: 2px;
+  --focus-ring-width: 2px;
+}
