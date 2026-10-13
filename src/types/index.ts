@@ -120,3 +120,85 @@ export interface ChatMessage {
     maxPrice?: number;
   };
 }
+
+// ==========================================
+// DIVISION E: AI AGENTS MESH & WORKFLOWS TYPES
+// ==========================================
+
+export type AgentStatus = 'active' | 'idle' | 'processing' | 'pending_approval' | 'paused' | 'completed';
+export type AgentDivision = 'executive' | 'customer' | 'supply' | 'marketing' | 'operations' | 'orchestration';
+export type AgentApprovalMode = 'mandatory' | 'conditional' | 'autonomous_monitoring';
+export type AgentHealth = 'optimal' | 'warning' | 'degraded';
+
+export interface AgentExecutionRecord {
+  id: string;
+  timestamp: string;
+  action: string;
+  outcome: string;
+  durationMs: number;
+  tokensUsed: number;
+}
+
+export interface CommerceAgent {
+  id: string; // e.g. AGT-EXE-01
+  name: string;
+  code: string;
+  division: AgentDivision;
+  categoryLabel: string;
+  purpose: string;
+  inputs: string[];
+  integrations: string[];
+  currentTask: string;
+  status: AgentStatus;
+  health: AgentHealth;
+  lastActive: string;
+  proposedAction: string;
+  supportingEvidence: string;
+  confidence: number; // 0-100
+  approvalRequirement: AgentApprovalMode;
+  executionHistory: AgentExecutionRecord[];
+  estimatedCost: {
+    costPerRunGbp: number;
+    tokensUsedMonthly: number;
+    modelRuntime: string;
+  };
+  iconName: string;
+}
+
+export interface WorkflowStep {
+  id: string;
+  stepNumber: number;
+  title: string;
+  agentId: string;
+  agentName: string;
+  description: string;
+  status: 'pending' | 'in_progress' | 'completed' | 'waiting_approval';
+  evidenceSnippet?: string;
+  actionPayload?: {
+    label: string;
+    value: string;
+    type?: 'stat' | 'badge' | 'quote' | 'alert';
+  }[];
+  decisionRequired?: boolean;
+}
+
+export interface AutonomousWorkflow {
+  id: string; // e.g. WF-STOCKOUT-01
+  code: string;
+  name: string;
+  category: string;
+  description: string;
+  participatingAgents: string[];
+  status: 'ready' | 'running' | 'waiting_approval' | 'completed';
+  currentStepIndex: number;
+  steps: WorkflowStep[];
+  commercialImpact: string;
+  confidence: number;
+  approvalSummary?: {
+    what: string;
+    why: string;
+    impact: string;
+    action: string;
+    limitations: string;
+  };
+}
