@@ -16,7 +16,7 @@ import {
 import { useStore } from '@/context/StoreContext';
 
 export function CommerceDigitalTwin() {
-  const { products, proposals } = useStore();
+  const { products, proposals, addProposal } = useStore();
 
   // Simulation Sliders State
   const [adSpendDelta, setAdSpendDelta] = useState<number>(0); // -50% to +50%
@@ -428,7 +428,24 @@ export function CommerceDigitalTwin() {
             <button
               onClick={() => {
                 setHasAppliedScenario(true);
-                alert(`Scenario submitted to the AI Decision Centre as a pending strategy proposal. Review in Decision Queue.`);
+                addProposal({
+                  id: `prop-twin-${Date.now()}`,
+                  variantId: 'SKU-AZU-10',
+                  productTitle: 'Digital Twin Strategy: Growth & Stockout Shield',
+                  color: 'Azure Blue',
+                  size: 'UK 10',
+                  supplier: 'AI Digital Twin Strategy Engine',
+                  proposedQuantity: 25,
+                  unitCost: 90,
+                  totalCost: 2250,
+                  what: `Execute simulated scenario: Maintain ${adSpendDelta >= 0 ? `+${adSpendDelta}%` : `${adSpendDelta}%`} ad allocation and shield UK 10 stock with 25 unit replenishment.`,
+                  why: `Digital Twin simulation indicates +£${Math.abs(revenueDeltaGbp).toLocaleString()} upside and prevents a critical 7-day stockout gap.`,
+                  impact: `Simulated Net Contribution reaches £${simulatedContributionMargin.toLocaleString()} (${simulatedContributionMarginPct}%) with ${confidenceScore}% confidence.`,
+                  limitations: 'Calculated using baseline historical elasticity; subject to supplier lead time stability.',
+                  status: 'pending',
+                  timestamp: new Date().toISOString(),
+                  urgency: 'high'
+                });
               }}
               className="btn btn-primary"
               style={{ height: '40px', fontSize: '0.8125rem' }}

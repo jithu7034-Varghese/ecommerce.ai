@@ -55,6 +55,7 @@ interface StoreContextType {
   proposals: AIProposal[];
   activeProposal: AIProposal | null;
   setActiveProposal: (proposal: AIProposal | null) => void;
+  addProposal: (proposal: AIProposal) => void;
   approveProposal: (proposalId: string) => void;
   rejectProposal: (proposalId: string, reason?: string) => void;
   editProposalQuantity: (proposalId: string, newQuantity: number) => void;
@@ -427,6 +428,10 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     );
   };
 
+  const addProposal = (newProposal: AIProposal) => {
+    setProposals((prev) => [newProposal, ...prev]);
+  };
+
   const undoAction = (logId: string) => {
     setAuditLogs((prev) =>
       prev.map((log) => (log.id === logId ? { ...log, status: 'reverted' } : log))
@@ -461,6 +466,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         proposals,
         activeProposal,
         setActiveProposal,
+        addProposal,
         approveProposal,
         rejectProposal,
         editProposalQuantity,

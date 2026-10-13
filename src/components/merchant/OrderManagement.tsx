@@ -60,7 +60,7 @@ export function OrderManagement() {
             Customer Orders & Fulfillment Queue
           </h2>
           <div style={{ fontSize: '0.8125rem', color: 'var(--store-text-muted)' }}>
-            Real-time intake stream synchronised with storefront guest checkout
+            Real-time order intake and fulfillment dispatch stream
           </div>
         </div>
 

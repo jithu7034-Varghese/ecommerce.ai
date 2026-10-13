@@ -57,8 +57,8 @@ export default function MerchantProductsPage() {
                       <td style={{ padding: '14px 16px' }}>{p.colorways.map((c) => c.name).join(', ')}</td>
                       <td style={{ padding: '14px 16px' }}>{p.availableSizes.join(', ')}</td>
                       <td style={{ padding: '14px 16px', textAlign: 'right' }}>
-                        <Link href={`/product/${p.id}`} className="btn btn-secondary" style={{ height: '30px', fontSize: '0.75rem', padding: '0 10px' }}>
-                          View Storefront
+                        <Link href="/merchant/inventory" className="btn btn-secondary" style={{ height: '30px', fontSize: '0.75rem', padding: '0 10px' }}>
+                          Manage SKU Stock
                         </Link>
                       </td>
                     </tr>

@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
 import '@/styles/globals.css';
 import { StoreProvider } from '@/context/StoreContext';
-import { BagDrawer } from '@/components/storefront/BagDrawer';
-import { AIAssistantModal } from '@/components/storefront/AIAssistantModal';
 
 export const metadata: Metadata = {
-  title: 'Berachtech E-Commerce AI OS — Human-Centred Fashion & Retail Platform',
-  description: 'Intuitive AI-powered luxury fashion shopping and ergonomic merchant operations suite.',
+  title: 'Berachtech E-Commerce AI OS — Enterprise Merchant Intelligence & Command Centre',
+  description: 'Enterprise AI Commerce Operating System: Executive Command Centre, Digital Twin simulation, Customer 360, and autonomous merchant operations.',
 };
 
 export default function RootLayout({
@@ -30,8 +28,6 @@ export default function RootLayout({
         </a>
         <StoreProvider>
           {children}
-          <BagDrawer />
-          <AIAssistantModal />
         </StoreProvider>
       </body>
     </html>

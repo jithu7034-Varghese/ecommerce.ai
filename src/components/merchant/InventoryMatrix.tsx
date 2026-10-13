@@ -56,7 +56,7 @@ export function InventoryMatrix() {
             Variant-Level Stock Matrix
           </h2>
           <div style={{ fontSize: '0.8125rem', color: 'var(--store-text-muted)' }}>
-            Granular SKU counts synchronized live across storefront selection buttons
+            Granular SKU counts synchronized live across enterprise channels and inventory reserves
           </div>
         </div>
 

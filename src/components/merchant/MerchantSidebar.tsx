@@ -20,7 +20,6 @@ import {
   Settings,
   ChevronDown,
   ChevronRight,
-  ExternalLink,
   Cpu,
   Compass,
   CheckSquare,
@@ -274,37 +273,44 @@ export function MerchantSidebar() {
         })}
       </nav>
 
-      {/* Customer Storefront Switcher Footer */}
+      {/* Enterprise System Status Footer */}
       <div
         style={{
           padding: '14px 16px',
           borderTop: '1px solid var(--merchant-sidebar-border)',
-          backgroundColor: 'rgba(0, 0, 0, 0.2)'
+          backgroundColor: 'rgba(0, 0, 0, 0.25)'
         }}
       >
-        <Link
-          href="/"
+        <div
           style={{
             display: 'flex',
             alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            padding: '10px 14px',
+            justifyContent: 'space-between',
+            padding: '10px 12px',
             borderRadius: 'var(--radius-md)',
-            backgroundColor: '#26143D',
-            color: '#FFFFFF',
-            fontSize: '0.75rem',
-            fontWeight: 700,
-            textDecoration: 'none',
-            border: '1px solid #3B1F5E',
-            transition: 'background-color 150ms ease'
+            backgroundColor: '#161320',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            fontSize: '0.6875rem'
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#331B52')}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#26143D')}
         >
-          <span>View Customer Storefront</span>
-          <ExternalLink size={13} />
-        </Link>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span
+              style={{
+                width: '8px',
+                height: '8px',
+                borderRadius: '50%',
+                backgroundColor: '#10B981',
+                boxShadow: '0 0 8px rgba(16, 185, 129, 0.6)'
+              }}
+            />
+            <span style={{ fontWeight: 700, color: 'var(--merchant-sidebar-text-active)', letterSpacing: '0.02em' }}>
+              AI OS OPERATING
+            </span>
+          </div>
+          <span style={{ color: 'var(--merchant-sidebar-text-muted)', fontSize: '0.625rem', fontFamily: 'monospace', fontWeight: 600 }}>
+            v2.4-ENT
+          </span>
+        </div>
       </div>
     </aside>
   );

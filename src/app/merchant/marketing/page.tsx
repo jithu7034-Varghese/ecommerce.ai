@@ -8,7 +8,7 @@ import { Megaphone, Tag, Sparkles } from 'lucide-react';
 function MarketingPage() {
   const campaigns = [
     { title: 'Autumn Wedding Guest Edit', channel: 'AI Stylist Recommendations', status: 'Active', conversion: '14.2%', revenue: '£2,840.00' },
-    { title: 'Velvet Evening Capsule', channel: 'Storefront Hero Spotlight', status: 'Active', conversion: '11.8%', revenue: '£1,650.00' },
+    { title: 'Velvet Evening Capsule', channel: 'Digital Lookbook Spotlight', status: 'Active', conversion: '11.8%', revenue: '£1,650.00' },
     { title: 'VIP Tailored Crepe Early Drop', channel: 'Direct Email Preview', status: 'Scheduled', conversion: '—', revenue: '—' }
   ];
 
